@@ -4,11 +4,10 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Les Flots des Remparts — Poissons & Grillades à Carcassonne | Commander à emporter & livraison</title>
-<meta name="description" content="Les Flots des Remparts, restaurant de poissons frais et grillades à Carcassonne. Commandez à emporter ou en livraison par téléphone, ou réservez votre table. Carte, horaires et contact." />
-<meta name="theme-color" content="#0c2d54" />
+<meta name="description" content="Les Flots des Remparts, maison de poissons frais et grillades à Carcassonne. Commandez à emporter ou en livraison par téléphone, ou réservez votre table. Carte, horaires et accès." />
+<meta name="theme-color" content="#0a1f3c" />
 <link rel="canonical" href="https://www.lesflotsdesremparts.fr/" />
 
-<!-- Open Graph / partage réseaux -->
 <meta property="og:type" content="restaurant" />
 <meta property="og:title" content="Les Flots des Remparts — Poissons & Grillades à Carcassonne" />
 <meta property="og:description" content="Poissons frais & grillades. Commandez par téléphone à emporter ou en livraison, ou réservez votre table à Carcassonne." />
@@ -18,21 +17,46 @@
 
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 
-<!-- Polices -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
 <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-<a class="skip-link" href="#menu">Aller au menu</a>
+<a class="skip-link" href="#menu">Aller à la carte</a>
 
-<!-- ============ BARRE COMMANDE (haut) ============ -->
-<div class="orderbar">
+<!-- Emblème réutilisable -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="crest" viewBox="0 0 200 200">
+    <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="100" cy="100" r="94"/>
+      <circle cx="100" cy="100" r="82" stroke-width="0.7"/>
+      <path d="M82 98 Q100 84 120 98 Q100 112 82 98 Z" stroke-width="1.8"/>
+      <path d="M82 98 72 91 M82 98 72 105 M72 91 72 105" stroke-width="1.8"/>
+      <path d="M68 120 q7 -7 14 0 t14 0 t14 0 t14 0" stroke-width="1.8"/>
+      <path d="M74 128 q6 -6 12 0 t12 0 t12 0" stroke-width="1.1" opacity="0.7"/>
+    </g>
+    <g fill="currentColor" stroke="none">
+      <circle cx="112" cy="95" r="1.7"/>
+      <path d="M93 66 v-13 h14 v13 z"/>
+      <path d="M91 53 l9 -11 l9 11 z"/>
+      <path d="M76 66 v-9 h9 v9 z"/>
+      <path d="M75 57 l5.5 -7 l5.5 7 z"/>
+      <path d="M115 66 v-9 h9 v9 z"/>
+      <path d="M114.5 57 l5.5 -7 l5.5 7 z"/>
+      <path d="M100 144 l4 5 l-4 5 l-4 -5 z"/>
+      <circle cx="88" cy="149" r="1.4"/>
+      <circle cx="112" cy="149" r="1.4"/>
+    </g>
+  </symbol>
+</svg>
+
+<!-- ============ BARRE COMMANDE ============ -->
+<div class="topbar">
   <div class="container">
-    <span>🛎️ <strong>À emporter&nbsp;·&nbsp;Livraison&nbsp;·&nbsp;Réservation</strong> — commandez dès maintenant</span>
-    <a class="orderbar__phone" data-tel href="tel:+33468000000">
+    <span class="topbar__label"><b>À emporter · Livraison · Réservation</b></span>
+    <a class="topbar__phone" data-tel href="tel:+33468000000">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       <span data-site="telephoneAffiche">04 68 00 00 00</span>
     </a>
@@ -43,12 +67,7 @@
 <header class="header" id="header">
   <nav class="nav" aria-label="Navigation principale">
     <a class="brand" href="#top" aria-label="Les Flots des Remparts — accueil">
-      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
-        <rect width="64" height="64" rx="15" fill="#103a6b"/>
-        <path d="M8 44c6-6 12-6 18 0 6 6 12 6 18 0 4-4 8-5 12-3" fill="none" stroke="#d4a24c" stroke-width="3" stroke-linecap="round"/>
-        <path d="M18 26c5-6 14-7 21-3 3 1.7 5.5 4 7 6.5-1.5 2.5-4 4.8-7 6.5-7 4-16 3-21-3l-4 .0 3-3-3-3z" fill="#eaf2fb"/>
-        <circle cx="40" cy="27.5" r="1.8" fill="#103a6b"/>
-      </svg>
+      <svg class="brand__mark crest" viewBox="0 0 200 200" aria-hidden="true"><use href="#crest"/></svg>
       <span class="brand__text">
         <span class="brand__name">Les Flots des Remparts</span>
         <span class="brand__tag">Poissons &amp; Grillades</span>
@@ -56,10 +75,11 @@
     </a>
 
     <ul class="nav__links" id="nav-links">
+      <li><a href="#maison">La Maison</a></li>
       <li><a href="#commander">Commander</a></li>
-      <li><a href="#menu">La carte</a></li>
+      <li><a href="#menu">La Carte</a></li>
       <li><a href="#reserver">Réserver</a></li>
-      <li><a href="#infos">Infos &amp; accès</a></li>
+      <li><a href="#infos">Accès</a></li>
     </ul>
 
     <div class="nav__cta">
@@ -68,7 +88,7 @@
         <span class="hide-sm">Commander</span>
       </a>
       <button class="nav__toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </nav>
@@ -78,163 +98,163 @@
 
 <!-- ============ HERO ============ -->
 <section class="hero" aria-label="Présentation">
-  <div class="hero__pattern" aria-hidden="true"></div>
-  <!-- Silhouette de la Cité de Carcassonne -->
-  <svg class="hero__cite" viewBox="0 0 600 260" fill="currentColor" aria-hidden="true">
-    <path d="M0 260 V150 h30 v-20 h20 v20 h34 v-40 l14-16 14 16 v40 h40 v-26 h22 v26 h44 v-52 l16-18 16 18 v52 h40 v-30 h24 v30 h46 v-44 l16-18 16 18 v44 h40 v-24 h22 v24 h36 v-40 l14-16 14 16 v40 h30 v110 Z"/>
-    <rect x="150" y="150" width="8" height="18" opacity=".5"/>
-    <rect x="300" y="140" width="8" height="20" opacity=".5"/>
-    <rect x="452" y="150" width="8" height="18" opacity=".5"/>
-  </svg>
+  <div class="hero__frame" aria-hidden="true"></div>
+  <svg class="hero__crest crest" viewBox="0 0 200 200" aria-hidden="true"><use href="#crest"/></svg>
 
   <div class="hero__inner">
-    <div class="hero__grid">
-      <div class="hero__col">
-        <span class="hero__badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21 8 14 2 9.4h7.6z"/></svg>
-          Poissons frais &amp; grillades · Carcassonne
-        </span>
-        <h1>Les Flots<br />des Remparts</h1>
-        <p class="hero__sub">Poissons &amp; Grillades</p>
-        <p class="hero__desc">
-          La générosité de la mer et le goût des belles grillades, au pied de la Cité.
-          À emporter, en livraison ou à table — <strong>on prend votre commande par téléphone.</strong>
-        </p>
-        <div class="hero__cta">
-          <a class="btn btn--gold btn--lg" data-tel href="tel:+33468000000">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Appeler pour commander
-          </a>
-          <a class="btn btn--outline btn--lg" href="#menu">Voir la carte</a>
-        </div>
-        <p class="hero__note">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4.5 8-11.8A8 8 0 0 0 4 10.2C4 17.5 12 22 12 22z"/><circle cx="12" cy="10" r="3"/></svg>
-          Au cœur de Carcassonne — à emporter, livraison &amp; sur place
-        </p>
-      </div>
-
-      <!-- Carte "commander maintenant" -->
-      <aside class="hero__card" aria-label="Commander maintenant">
-        <h2>Commander maintenant</h2>
-        <p>Un seul geste : appelez, on prépare votre commande.</p>
-        <a class="hero__phone" data-tel href="tel:+33468000000">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <span data-site="telephoneAffiche">04 68 00 00 00</span>
-        </a>
-        <a class="btn btn--gold btn--block" data-tel href="tel:+33468000000">Appeler pour commander</a>
-        <a class="btn btn--wa btn--block" id="wa-btn" data-wa href="#" hidden>
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.8 14.02c-.24.68-1.42 1.32-1.95 1.36-.5.05-.5.4-3.15-.66-2.66-1.06-4.3-3.8-4.43-3.98-.13-.18-1.05-1.4-1.05-2.67s.66-1.9.9-2.16c.24-.26.53-.32.7-.32.18 0 .35 0 .5.01.16.01.38-.06.59.45.24.58.8 2 .87 2.15.07.14.12.31.02.5-.1.18-.15.29-.29.45-.15.18-.31.39-.44.52-.15.15-.3.31-.13.6.18.29.79 1.3 1.69 2.11 1.17 1.04 2.15 1.36 2.44 1.51.29.15.46.13.63-.08.18-.2.73-.85.93-1.14.19-.29.39-.24.65-.14.27.1 1.68.79 1.97.94.29.14.48.22.55.34.07.13.07.71-.17 1.39z"/></svg>
-          Commander sur WhatsApp
-        </a>
-        <p class="hero__hours-hint">Ouvert selon les horaires ci-dessous — <a href="#infos">voir les horaires</a></p>
-      </aside>
+    <span class="hero__eyebrow">Maison de la mer &amp; du feu · Carcassonne</span>
+    <h1>Les Flots<br />des Remparts</h1>
+    <div class="hero__rule"><span>Poissons &amp; Grillades</span></div>
+    <p class="hero__desc">
+      La générosité de la mer et le goût des belles grillades, au pied de la Cité.
+      À emporter, en livraison ou à votre table — <strong>votre commande se passe par téléphone.</strong>
+    </p>
+    <div class="hero__cta">
+      <a class="btn btn--gold btn--lg" data-tel href="tel:+33468000000">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Appeler pour commander
+      </a>
+      <a class="btn btn--ghost btn--lg" href="#menu">Découvrir la carte</a>
     </div>
+    <a class="btn btn--wa btn--lg" id="wa-btn" data-wa href="#" hidden style="margin-top:16px">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2z"/></svg>
+      Commander sur WhatsApp
+    </a>
+    <p class="hero__phoneline">
+      Ou composez le
+      <a data-tel href="tel:+33468000000"><span data-site="telephoneAffiche">04 68 00 00 00</span></a>
+    </p>
   </div>
 
-  <div class="wave-divider" aria-hidden="true">
-    <svg viewBox="0 0 1200 70" preserveAspectRatio="none" fill="currentColor"><path d="M0 40 C 150 70 300 10 450 30 C 600 50 750 70 900 45 C 1050 25 1150 45 1200 40 L1200 70 L0 70 Z"/></svg>
+  <div class="hero__scroll" aria-hidden="true">
+    Découvrir
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
   </div>
 </section>
 
-<!-- ============ COMMENT COMMANDER (3 services) ============ -->
-<section class="services" id="commander" aria-labelledby="commander-title">
+<!-- ============ LA MAISON ============ -->
+<section class="section maison" id="maison" aria-labelledby="maison-title">
+  <div class="container">
+    <div class="maison__grid">
+      <div class="maison__crest reveal">
+        <svg class="crest" viewBox="0 0 200 200" aria-hidden="true"><use href="#crest"/></svg>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Notre maison</span>
+        <h2 class="section-title" id="maison-title">Le meilleur de la mer,<br />la noblesse du feu</h2>
+        <p>Chez <em>Les Flots des Remparts</em>, on choisit le poisson selon l'arrivage et l'on saisit de belles pièces de viande à la flamme. Des entrées fraîches, des desserts faits maison, et cette générosité du Sud que l'on aime partager.</p>
+        <p>À deux pas de la Cité, notre table se savoure sur place… ou chez vous. Un seul geste pour en profiter&nbsp;: <strong style="color:var(--gold-2)">un appel</strong>.</p>
+        <p class="maison__signature">Bienvenue à bord.</p>
+
+        <div class="pillars">
+          <div class="pillar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12c4-5 9-6 13-3 2 1.3 3.5 2 5 2.5-1.5 1.7-3 2.6-5 3.3-4 1.4-9 .2-13-2.8z"/><circle cx="16.5" cy="11" r=".6" fill="currentColor"/></svg>
+            <h3>Poisson d'arrivage</h3>
+            <p>Frais, choisi chaque jour</p>
+          </div>
+          <div class="pillar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1.6 2 .6 3.6-.4 5-.9 1.3-.6 3 .9 3.8M8 8c.8 1.2.3 2.3-.3 3.2M16 8c.8 1.2.3 2.3-.3 3.2"/><path d="M6 13a6 6 0 0 0 12 0"/></svg>
+            <h3>Grillades au feu</h3>
+            <p>Bœuf, canard, agneau</p>
+          </div>
+          <div class="pillar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3v7a3 3 0 0 0 6 0V3M10 3v18M17 3c-1.5 0-2 3-2 6s.5 4 2 4 2-1 2-4-.5-6-2-6z"/></svg>
+            <h3>Fait maison</h3>
+            <p>Entrées & desserts</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMMANDER (services) ============ -->
+<section class="section section--deep" id="commander" aria-labelledby="commander-title">
   <div class="container">
     <div class="title-block center">
       <span class="eyebrow">La façon la plus simple de se régaler</span>
       <h2 class="section-title" id="commander-title">Commander &amp; réserver</h2>
-      <p class="section-lead">Choisissez votre formule, puis <strong>un simple appel suffit</strong>. On s'occupe du reste.</p>
+      <div class="fleuron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.6 6.4L20 10l-6.4 1.6L12 18l-1.6-6.4L4 10l6.4-1.6z"/></svg></div>
+      <p class="section-lead">Choisissez votre formule&nbsp;: un simple appel suffit, nous nous occupons du reste.</p>
     </div>
 
     <div class="services__grid">
-      <!-- À emporter -->
       <article class="service reveal">
-        <span class="service__num">01</span>
+        <span class="service__num">I</span>
         <div class="service__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
         </div>
         <h3>À emporter</h3>
-        <p>Click &amp; Collect : commandez par téléphone, on vous dit quand c'est prêt, vous récupérez sur place. Chaud et croustillant.</p>
-        <div class="service__meta">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          Prêt en 15–25 min environ
-        </div>
+        <p>Click &amp; Collect&nbsp;: commandez par téléphone, nous vous indiquons l'heure de retrait. Vos plats, chauds et prêts à savourer.</p>
+        <div class="service__meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Prêt en 15 à 25 min</div>
         <a class="btn btn--gold btn--block" data-tel href="tel:+33468000000">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           Appeler pour commander
         </a>
       </article>
 
-      <!-- Livraison -->
       <article class="service reveal">
-        <span class="service__num">02</span>
+        <span class="service__num">II</span>
         <div class="service__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5.5" cy="17.5" r="2.5"/><circle cx="17" cy="17.5" r="2.5"/><path d="M14.5 17.5H8M5.5 15V8h6l3 4h3l1.5 2v3.5"/><path d="M11.5 8 13 5h3"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5.5" cy="17.5" r="2.5"/><circle cx="17" cy="17.5" r="2.5"/><path d="M14.5 17.5H8M5.5 15V8h6l3 4h3l1.5 2v3.5"/><path d="M11.5 8 13 5h3"/></svg>
         </div>
         <h3>Livraison</h3>
-        <p>On vous livre bien au chaud, chez vous. Passez commande par téléphone, on vous confirme le délai et les frais.</p>
-        <div class="service__meta">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4.5 8-11.8A8 8 0 0 0 4 10.2C4 17.5 12 22 12 22z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span data-site="livraisonZone">Carcassonne et alentours</span>
-        </div>
+        <p>Nous vous livrons bien au chaud, chez vous. Passez commande par téléphone&nbsp;: délai et frais confirmés au moment de l'appel.</p>
+        <div class="service__meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4.5 8-11.8A8 8 0 0 0 4 10.2C4 17.5 12 22 12 22z"/><circle cx="12" cy="10" r="3"/></svg><span data-site="livraisonZone">Carcassonne &amp; alentours</span></div>
         <a class="btn btn--gold btn--block" data-tel href="tel:+33468000000">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           Appeler pour se faire livrer
         </a>
       </article>
 
-      <!-- Réserver -->
       <article class="service reveal">
-        <span class="service__num">03</span>
+        <span class="service__num">III</span>
         <div class="service__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
         </div>
         <h3>Réserver une table</h3>
-        <p>Envie de vous installer ? Réservez votre table en bord de remparts, par téléphone ou via le formulaire.</p>
-        <div class="service__meta">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-          Groupes bienvenus
-        </div>
-        <a class="btn btn--outline-navy btn--block" href="#reserver">
+        <p>Envie de vous installer&nbsp;? Réservez votre table à deux pas des remparts, par téléphone ou via notre formulaire.</p>
+        <div class="service__meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Groupes bienvenus</div>
+        <a class="btn btn--ghost btn--block" href="#reserver">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
           Réserver ma table
         </a>
       </article>
     </div>
 
-    <!-- Étapes -->
     <div class="steps">
       <div class="step reveal">
-        <div class="step__badge">1</div>
+        <div class="step__num">Étape I</div>
+        <div class="step__badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
         <h3>Vous appelez</h3>
-        <p>Un coup de fil au <a data-tel href="tel:+33468000000"><strong data-site="telephoneAffiche">04 68 00 00 00</strong></a> et vous annoncez vos envies.</p>
+        <p>Un appel au <a data-tel href="tel:+33468000000"><span data-site="telephoneAffiche">04 68 00 00 00</span></a> et vous annoncez vos envies.</p>
       </div>
       <div class="step reveal">
-        <div class="step__badge">2</div>
+        <div class="step__num">Étape II</div>
+        <div class="step__badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1.6 2 .6 3.6-.4 5-.9 1.3-.6 3 .9 3.8"/><path d="M6 13a6 6 0 0 0 12 0"/></svg></div>
         <h3>On prépare</h3>
-        <p>Poissons et grillades minute. On vous donne l'heure de retrait ou de livraison.</p>
+        <p>Poissons et grillades minute. On fixe l'heure de retrait ou de livraison.</p>
       </div>
       <div class="step reveal">
-        <div class="step__badge">3</div>
+        <div class="step__num">Étape III</div>
+        <div class="step__badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M5 12a7 7 0 0 1 14 0M3 12h18M8 16h8"/></svg></div>
         <h3>Vous vous régalez</h3>
-        <p>À emporter, livré chez vous, ou à table face aux remparts. Bon appétit&nbsp;!</p>
+        <p>À emporter, livré chez vous, ou à table face aux remparts.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ MENU / LA CARTE ============ -->
-<section class="section section--tint" id="menu" aria-labelledby="menu-title">
+<!-- ============ LA CARTE ============ -->
+<section class="section" id="menu" aria-labelledby="menu-title">
   <div class="container">
     <div class="title-block center">
-      <span class="eyebrow">Fait maison, produits frais</span>
-      <h2 class="section-title" id="menu-title">La carte</h2>
-      <div class="ornament" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 12c4-5 9-6 13-3 1.7 1.1 3 2 5 2-2 1.5-3.5 2.4-5 3-4 1.6-9 .3-13-2zm14-1.2a.9.9 0 1 0 0 1.8.9.9 0 0 0 0-1.8z"/></svg>
-      </div>
-      <p class="section-lead">Poissons selon l'arrivage, belles pièces grillées, entrées fraîches et desserts maison.</p>
+      <span class="eyebrow">Fait maison · Produits frais</span>
+      <h2 class="section-title">La Carte</h2>
+      <div class="fleuron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 12c4-5 9-6 13-3 1.7 1.1 3 2 5 2-2 1.5-3.5 2.4-5 3-4 1.6-9 .3-13-2z"/></svg></div>
+      <p class="section-lead" id="menu-title">Poissons selon l'arrivage, belles pièces grillées, entrées fraîches et desserts maison.</p>
     </div>
 
-    <!-- Onglets -->
     <div class="menu-tabs" role="tablist" aria-label="Catégories de la carte">
       <a class="menu-tab is-active" href="#cat-entrees">Entrées</a>
       <a class="menu-tab" href="#cat-poissons">Poissons</a>
@@ -246,9 +266,8 @@
     <!-- ENTRÉES -->
     <div class="menu-cat" id="cat-entrees">
       <div class="menu-cat__head">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11h18a9 9 0 0 1-18 0z"/><path d="M12 11V3M12 3c-2 0-3 1.5-3 3M12 3c2 0 3 1.5 3 3"/></svg>
-        <h3>Entrées</h3>
-        <span class="rule"></span>
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11h18a9 9 0 0 1-18 0z"/><path d="M12 11V3M12 3c-2 0-3 1.5-3 3M12 3c2 0 3 1.5 3 3"/></svg>
+        <h3>Entrées<span class="sub">Pour bien commencer</span></h3>
       </div>
       <div class="menu-grid">
         <div class="mitem"><span class="mitem__name">Salade chèvre chaud et ses toasts</span><span class="mitem__dots"></span><span class="mitem__price">9,00 €</span></div>
@@ -266,25 +285,16 @@
     <!-- POISSONS -->
     <div class="menu-cat" id="cat-poissons">
       <div class="menu-cat__head">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12c4-5 9-6 13-3 2 1.3 3.5 2 5 2.5-1.5 1.7-3 2.6-5 3.3-4 1.4-9 .2-13-2.8z"/><path d="M16 9.5v5"/><circle cx="17.5" cy="11.5" r=".7" fill="currentColor"/></svg>
-        <h3>Poissons</h3>
-        <span class="rule"></span>
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12c4-5 9-6 13-3 2 1.3 3.5 2 5 2.5-1.5 1.7-3 2.6-5 3.3-4 1.4-9 .2-13-2.8z"/><circle cx="17.5" cy="11.5" r=".7" fill="currentColor"/></svg>
+        <h3>Poissons<span class="sub">Le meilleur de la mer</span></h3>
       </div>
-
       <div class="pricebox">
-        <div class="pricebox__title">
-          <span class="big">Poisson selon arrivage</span> — 35,00 € / kg
-        </div>
-        <div class="pricebox__grid">
-          <span>500 g&nbsp;: <b>17,50 €</b></span>
-          <span>300 g&nbsp;: <b>10,50 €</b></span>
-          <span>100 g&nbsp;: <b>3,50 €</b></span>
-        </div>
+        <p class="pricebox__title"><span class="big">Poisson selon arrivage</span> — <span class="price">35,00 € / kg</span></p>
+        <div class="pricebox__grid"><span>500 g&nbsp;: <b>17,50 €</b></span><span>300 g&nbsp;: <b>10,50 €</b></span><span>100 g&nbsp;: <b>3,50 €</b></span></div>
       </div>
-
       <div class="menu-grid">
         <div class="mitem"><span class="mitem__name">Saint-Pierre, beurre noisette et citron</span><span class="mitem__dots"></span><span class="mitem__price small">selon arrivage</span></div>
-        <div class="mitem"><span class="mitem__name">Turbot poêlé au beurre noisette, citron</span><span class="mitem__dots"></span><span class="mitem__price small">selon arrivage</span></div>
+        <div class="mitem"><span class="mitem__name">Turbot poêlé, beurre noisette &amp; citron</span><span class="mitem__dots"></span><span class="mitem__price small">selon arrivage</span></div>
         <div class="mitem"><span class="mitem__name">Friture de poisson <span class="mitem__desc">1 personne</span></span><span class="mitem__dots"></span><span class="mitem__price">13,90 €</span></div>
         <div class="mitem"><span class="mitem__name">Poêlée de fruits de mer</span><span class="mitem__dots"></span><span class="mitem__price small">selon arrivage</span></div>
         <div class="mitem"><span class="mitem__name">Crevettes piri-piri</span><span class="mitem__dots"></span><span class="mitem__price small">selon arrivage</span></div>
@@ -296,9 +306,8 @@
     <!-- VIANDES -->
     <div class="menu-cat" id="cat-viandes">
       <div class="menu-cat__head">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h11M4 12h11M4 17h7"/><path d="M18 4v16M15 6l3-2 3 2M15 18l3 2 3-2"/></svg>
-        <h3>Viandes</h3>
-        <span class="rule"></span>
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h11M4 12h11M4 17h7"/><path d="M18 4v16M15 6l3-2 3 2M15 18l3 2 3-2"/></svg>
+        <h3>Viandes<span class="sub">Grillées à la flamme</span></h3>
       </div>
       <div class="menu-grid">
         <div class="mitem"><span class="mitem__name">Pièce de bœuf <span class="mitem__desc">300 g</span></span><span class="mitem__dots"></span><span class="mitem__price">23,90 €</span></div>
@@ -312,83 +321,76 @@
     <!-- DESSERTS -->
     <div class="menu-cat" id="cat-desserts">
       <div class="menu-cat__head">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16M6 20l1-6h10l1 6"/><path d="M12 14V9a3 3 0 0 1 3-3c0-1.5-1.5-2.5-3-2.5S9 4.5 9 6"/></svg>
-        <h3>Desserts</h3>
-        <span class="rule"></span>
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16M6 20l1-6h10l1 6"/><path d="M12 14V9a3 3 0 0 1 3-3c0-1.5-1.5-2.5-3-2.5S9 4.5 9 6"/></svg>
+        <h3>Desserts<span class="sub">La touche sucrée</span></h3>
       </div>
       <div class="menu-grid">
         <div class="mitem"><span class="mitem__name">Fondant au chocolat</span><span class="mitem__dots"></span><span class="mitem__price">8,30 €</span></div>
         <div class="mitem"><span class="mitem__name">Tarte</span><span class="mitem__dots"></span><span class="mitem__price">8,90 €</span></div>
         <div class="mitem"><span class="mitem__name">Panna cotta</span><span class="mitem__dots"></span><span class="mitem__price">7,20 €</span></div>
         <div class="mitem"><span class="mitem__name">Tiramisu</span><span class="mitem__dots"></span><span class="mitem__price">7,90 €</span></div>
-        <div class="mitem"><span class="mitem__name">Café gourmand ou Thé gourmand</span><span class="mitem__dots"></span><span class="mitem__price">8,20 €</span></div>
+        <div class="mitem"><span class="mitem__name">Café ou thé gourmand</span><span class="mitem__dots"></span><span class="mitem__price">8,20 €</span></div>
       </div>
     </div>
 
     <!-- BOISSONS -->
     <div class="menu-cat" id="cat-boissons">
       <div class="menu-cat__head">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12l-1.5 5.5a6.5 6.5 0 0 1-9 0z"/><path d="M12 14v5M8 21h8"/></svg>
-        <h3>Boissons</h3>
-        <span class="rule"></span>
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12l-1.5 5.5a6.5 6.5 0 0 1-9 0z"/><path d="M12 14v5M8 21h8"/></svg>
+        <h3>Boissons<span class="sub">Sans alcool</span></h3>
       </div>
-
       <div class="menu-grid">
         <div>
           <div class="mitem"><span class="mitem__name">Thé à la menthe</span><span class="mitem__dots"></span><span class="mitem__price">3,50 €</span></div>
-          <div class="mitem"><span class="mitem__name">Cocktail</span><span class="mitem__dots"></span><span class="mitem__price">7,50 €</span></div>
+          <div class="mitem"><span class="mitem__name">Cocktail maison</span><span class="mitem__dots"></span><span class="mitem__price">7,50 €</span></div>
           <div class="mitem"><span class="mitem__name">Boisson gazeuse</span><span class="mitem__dots"></span><span class="mitem__price">3,50 €</span></div>
           <div class="mitem"><span class="mitem__name">Vin désalcoolisé <span class="mitem__desc">le verre</span></span><span class="mitem__dots"></span><span class="mitem__price">3,50 €</span></div>
           <div class="mitem"><span class="mitem__name">Bière désalcoolisée</span><span class="mitem__dots"></span><span class="mitem__price">3,50 €</span></div>
         </div>
         <div>
-          <div class="mitem"><span class="mitem__name">Coca-Cola / Coca-Cola Zéro</span><span class="mitem__dots"></span><span class="mitem__price">3,50 €</span></div>
+          <div class="mitem"><span class="mitem__name">Coca-Cola / Zéro</span><span class="mitem__dots"></span><span class="mitem__price">3,50 €</span></div>
           <div class="mitem"><span class="mitem__name">Ice Tea</span><span class="mitem__dots"></span><span class="mitem__price">3,50 €</span></div>
           <div class="mitem"><span class="mitem__name">Orangina / Oasis Tropical</span><span class="mitem__dots"></span><span class="mitem__price">3,50 €</span></div>
-          <div class="mitem"><span class="mitem__name">Schweppes / Schweppes Agrumes</span><span class="mitem__dots"></span><span class="mitem__price">3,50 €</span></div>
-          <div class="mitem"><span class="mitem__name">Perrier 33 cl / Limonade / Capri-Sun</span><span class="mitem__dots"></span><span class="mitem__price">3,50 €</span></div>
+          <div class="mitem"><span class="mitem__name">Schweppes / Agrumes</span><span class="mitem__dots"></span><span class="mitem__price">3,50 €</span></div>
+          <div class="mitem"><span class="mitem__name">Perrier / Limonade / Capri-Sun</span><span class="mitem__dots"></span><span class="mitem__price">3,50 €</span></div>
           <div class="mitem"><span class="mitem__name">Red Bull</span><span class="mitem__dots"></span><span class="mitem__price">4,50 €</span></div>
         </div>
       </div>
 
-      <div class="pricebox" style="margin-top:24px">
-        <div class="pricebox__title"><span class="big">Cocktails &amp; apéritifs sans alcool</span> — 7,50 € l'unité</div>
-        <div class="pricebox__grid">
-          <span>Mojito Granini</span><span>Piña Colada Granini</span><span>Planteur Granini</span>
-          <span>Spritz Venezio</span><span>Spritz Limoncello</span><span>Hugo Venezio</span>
-          <span>Tanqueray 0.0</span><span>Anis Cristal sans alcool</span><span>Palermo blanc</span>
-        </div>
+      <div class="pricebox">
+        <p class="pricebox__title"><span class="big">Cocktails &amp; apéritifs sans alcool</span> — <span class="price">7,50 €</span></p>
+        <div class="pricebox__grid"><span>Mojito Granini</span><span>Piña Colada Granini</span><span>Planteur Granini</span><span>Spritz Venezio</span><span>Spritz Limoncello</span><span>Hugo Venezio</span><span>Tanqueray 0.0</span><span>Anis Cristal sans alcool</span><span>Palermo blanc</span></div>
       </div>
 
-      <div class="menu-grid" style="margin-top:8px">
-        <div class="pricebox">
-          <div class="pricebox__title"><span class="big">Jus de fruits</span> — 3,50 €</div>
+      <div class="menu-grid">
+        <div class="pricebox" style="margin:8px 0">
+          <p class="pricebox__title"><span class="big">Jus de fruits</span> — <span class="price">3,50 €</span></p>
           <div class="pricebox__grid"><span>Orange</span><span>Pomme</span><span>Ananas</span><span>Multifruits</span><span>Tomate</span></div>
         </div>
-        <div class="pricebox">
-          <div class="pricebox__title"><span class="big">Sirops</span> — 2,50 €</div>
-          <div class="pricebox__grid"><span>Menthe verte</span><span>Grenadine</span><span>Cassis</span><span>Citron</span><span>Fraise</span><span>Pêche</span><span>Violette</span><span>Orgeat</span></div>
+        <div class="pricebox" style="margin:8px 0">
+          <p class="pricebox__title"><span class="big">Sirops</span> — <span class="price">2,50 €</span></p>
+          <div class="pricebox__grid"><span>Menthe</span><span>Grenadine</span><span>Cassis</span><span>Citron</span><span>Fraise</span><span>Pêche</span><span>Violette</span><span>Orgeat</span></div>
         </div>
       </div>
 
-      <div class="pricebox" style="margin-top:8px">
-        <div class="pricebox__title"><span class="big">Vins désalcoolisés — Le Petit Béret</span> — 4,50 € le verre</div>
-        <div class="pricebox__grid">
-          <span>Rouge</span><span>Blanc</span><span>Rosé</span><span>Blanc calme</span><span>Blanc effervescent</span>
-        </div>
+      <div class="pricebox">
+        <p class="pricebox__title"><span class="big">Vins désalcoolisés — Le Petit Béret</span> — <span class="price">4,50 € le verre</span></p>
+        <div class="pricebox__grid"><span>Rouge</span><span>Blanc</span><span>Rosé</span><span>Blanc calme</span><span>Blanc effervescent</span></div>
       </div>
     </div>
 
     <p class="menu-foot">— Prix nets en euros —</p>
 
-    <!-- Carte imprimée -->
     <div class="carte-real reveal">
-      <img src="assets/carte-les-flots-des-remparts.jpg" alt="La carte imprimée de Les Flots des Remparts — poissons et grillades" id="carte-thumb" loading="lazy" width="1055" height="1491" />
+      <div class="carte-real__img">
+        <img src="assets/carte-les-flots-des-remparts.jpg" alt="La carte imprimée de Les Flots des Remparts — poissons et grillades" id="carte-thumb" loading="lazy" width="1055" height="1491" />
+      </div>
       <div>
+        <span class="eyebrow">Le document original</span>
         <h3>La carte complète</h3>
         <p>Retrouvez l'intégralité de notre carte imprimée. Cliquez pour l'agrandir, ou appelez-nous pour connaître les arrivages et suggestions du jour.</p>
-        <div class="hero__cta">
-          <a class="btn btn--outline-navy" href="assets/carte-les-flots-des-remparts.jpg" target="_blank" rel="noopener">
+        <div class="row">
+          <a class="btn btn--ghost" href="assets/carte-les-flots-des-remparts.jpg" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg>
             Agrandir la carte
           </a>
@@ -400,19 +402,21 @@
 </section>
 
 <!-- ============ RÉSERVATION ============ -->
-<section class="section" id="reserver" aria-labelledby="reserver-title">
+<section class="section section--deep" id="reserver" aria-labelledby="reserver-title">
   <div class="container">
     <div class="title-block center">
       <span class="eyebrow">À table, face aux remparts</span>
       <h2 class="section-title" id="reserver-title">Réserver une table</h2>
-      <p class="section-lead">Le plus rapide : un coup de fil. Vous pouvez aussi nous envoyer une demande, on vous rappelle pour confirmer.</p>
+      <div class="fleuron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.6 6.4L20 10l-6.4 1.6L12 18l-1.6-6.4L4 10l6.4-1.6z"/></svg></div>
+      <p class="section-lead">Le plus rapide reste l'appel. Vous pouvez aussi nous envoyer une demande&nbsp;: nous vous rappelons pour confirmer.</p>
     </div>
 
     <div class="reserve-grid">
-      <div class="reserve-side">
-        <h3>Réservez en un appel</h3>
-        <p>Notre équipe prend votre réservation directement au téléphone — c'est confirmé tout de suite.</p>
-        <a class="hero__phone" data-tel href="tel:+33468000000">
+      <div class="reserve-side reveal">
+        <span class="eyebrow">En un instant</span>
+        <h3>Réservez par téléphone</h3>
+        <p>Notre équipe prend votre réservation directement&nbsp;: c'est confirmé tout de suite.</p>
+        <a class="phone-xl" data-tel href="tel:+33468000000">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           <span data-site="telephoneAffiche">04 68 00 00 00</span>
         </a>
@@ -420,36 +424,24 @@
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Groupes et grandes tablées bienvenus</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Terrasse selon la saison</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Un événement à fêter ? Parlons-en au téléphone</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Un événement à fêter&nbsp;? Parlons-en</li>
         </ul>
       </div>
 
-      <form class="form" id="reserve-form" novalidate>
+      <form class="form reveal" id="reserve-form" novalidate>
         <h3>Demande de réservation</h3>
         <p>Remplissez ces quelques champs — votre messagerie s'ouvrira avec la demande pré-remplie, prête à envoyer.</p>
         <div class="field">
-          <label for="r-name">Votre nom *</label>
+          <label for="r-name">Votre nom</label>
           <input type="text" id="r-name" name="name" autocomplete="name" required placeholder="Nom et prénom" />
         </div>
         <div class="field-row">
-          <div class="field">
-            <label for="r-phone">Téléphone *</label>
-            <input type="tel" id="r-phone" name="phone" autocomplete="tel" required placeholder="06 00 00 00 00" />
-          </div>
-          <div class="field">
-            <label for="r-covers">Nombre de personnes *</label>
-            <input type="number" id="r-covers" name="covers" min="1" max="30" required placeholder="2" />
-          </div>
+          <div class="field"><label for="r-phone">Téléphone</label><input type="tel" id="r-phone" name="phone" autocomplete="tel" required placeholder="06 00 00 00 00" /></div>
+          <div class="field"><label for="r-covers">Personnes</label><input type="number" id="r-covers" name="covers" min="1" max="30" required placeholder="2" /></div>
         </div>
         <div class="field-row">
-          <div class="field">
-            <label for="r-date">Date *</label>
-            <input type="date" id="r-date" name="date" required />
-          </div>
-          <div class="field">
-            <label for="r-time">Heure *</label>
-            <input type="time" id="r-time" name="time" required />
-          </div>
+          <div class="field"><label for="r-date">Date</label><input type="date" id="r-date" name="date" required /></div>
+          <div class="field"><label for="r-time">Heure</label><input type="time" id="r-time" name="time" required /></div>
         </div>
         <div class="field">
           <label for="r-msg">Message (optionnel)</label>
@@ -460,83 +452,61 @@
           Envoyer ma demande
         </button>
         <p class="form__or">— ou, encore plus simple —</p>
-        <a class="btn btn--outline-navy btn--block" data-tel href="tel:+33468000000">Appeler le restaurant</a>
+        <a class="btn btn--ghost btn--block" data-tel href="tel:+33468000000">Appeler le restaurant</a>
         <p class="form__hint">Ce formulaire ouvre votre application e-mail. Une réservation n'est confirmée qu'après notre réponse ou votre appel.</p>
       </form>
     </div>
   </div>
 </section>
 
-<!-- ============ INFOS PRATIQUES ============ -->
-<section class="section section--tint" id="infos" aria-labelledby="infos-title">
+<!-- ============ INFOS & ACCÈS ============ -->
+<section class="section" id="infos" aria-labelledby="infos-title">
   <div class="container">
     <div class="title-block center">
       <span class="eyebrow">Nous trouver</span>
-      <h2 class="section-title" id="infos-title">Infos &amp; accès</h2>
+      <h2 class="section-title" id="infos-title">Accès &amp; horaires</h2>
+      <div class="fleuron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.6 6.4L20 10l-6.4 1.6L12 18l-1.6-6.4L4 10l6.4-1.6z"/></svg></div>
     </div>
 
     <div class="infos-grid">
       <div>
         <div class="info-card">
-          <div class="info-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-          <div>
-            <h3>Téléphone</h3>
-            <a data-tel href="tel:+33468000000" data-site="telephoneAffiche">04 68 00 00 00</a>
-            <p>Commandes, livraisons &amp; réservations</p>
-          </div>
+          <div class="info-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><h3>Téléphone</h3><a data-tel href="tel:+33468000000" data-site="telephoneAffiche">04 68 00 00 00</a><p>Commandes, livraisons &amp; réservations</p></div>
         </div>
         <div class="info-card">
-          <div class="info-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4.5 8-11.8A8 8 0 0 0 4 10.2C4 17.5 12 22 12 22z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div>
-            <h3>Adresse</h3>
-            <p style="margin-top:2px;color:var(--ink)">
-              <span data-site="adresse">1 rue des Remparts</span><br />
-              <span data-site="codePostal">11000</span> <span data-site="adresseVille">Carcassonne</span>
-            </p>
-            <a data-maps target="_blank" rel="noopener" href="#">Itinéraire &amp; plan →</a>
-          </div>
+          <div class="info-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4.5 8-11.8A8 8 0 0 0 4 10.2C4 17.5 12 22 12 22z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><h3>Adresse</h3><p style="color:var(--cream)"><span data-site="adresse">1 rue des Remparts</span><br /><span data-site="codePostal">11000</span> <span data-site="adresseVille">Carcassonne</span></p><a data-maps target="_blank" rel="noopener" href="#">Itinéraire &amp; plan →</a></div>
         </div>
         <div class="info-card">
-          <div class="info-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></div>
-          <div>
-            <h3>E-mail</h3>
-            <a data-mailto href="#" data-site="email">contact@lesflotsdesremparts.fr</a>
-            <p>Pour toute autre demande</p>
-          </div>
+          <div class="info-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></div>
+          <div><h3>E-mail</h3><a data-mailto href="#" data-site="email">contact@lesflotsdesremparts.fr</a><p>Pour toute autre demande</p></div>
         </div>
       </div>
 
       <div>
-        <div class="info-card" style="border-bottom:none;padding-bottom:8px">
-          <div class="info-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-          <div><h3>Horaires d'ouverture</h3></div>
-        </div>
+        <p class="hours-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Horaires d'ouverture</p>
         <table class="hours"><tbody id="hours-body"></tbody></table>
       </div>
     </div>
 
-    <!-- Carte Google -->
-    <div style="margin-top:34px;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-sm);border:1px solid var(--line)">
-      <iframe id="map-frame" title="Plan d'accès au restaurant Les Flots des Remparts à Carcassonne" width="100%" height="340" style="border:0;display:block" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="map-frame">
+      <iframe id="map-frame" title="Plan d'accès au restaurant Les Flots des Remparts à Carcassonne" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 </section>
 
 <!-- ============ BANDE CTA ============ -->
-<section class="section">
-  <div class="container">
-    <div class="cta-band">
-      <div class="cta-band__pattern" aria-hidden="true"></div>
-      <h2>Une petite faim de poisson ou d'une belle grillade ?</h2>
-      <p>À emporter, en livraison ou à table : un seul numéro, et c'est parti.</p>
-      <div class="cta-band__row">
-        <a class="btn btn--gold btn--lg" data-tel href="tel:+33468000000">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <span data-site="telephoneAffiche">04 68 00 00 00</span>
-        </a>
-        <a class="btn btn--outline btn--lg" href="#menu">Revoir la carte</a>
-      </div>
-    </div>
+<section class="cta-band">
+  <svg class="cta-band__crest crest" viewBox="0 0 200 200" aria-hidden="true"><use href="#crest"/></svg>
+  <h2>Une envie de poisson ou d'une belle grillade&nbsp;?</h2>
+  <p>À emporter, en livraison ou à table — un seul numéro, et c'est parti.</p>
+  <div class="cta-band__row">
+    <a class="btn btn--gold btn--lg" data-tel href="tel:+33468000000">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span data-site="telephoneAffiche">04 68 00 00 00</span>
+    </a>
+    <a class="btn btn--ghost btn--lg" href="#menu">Revoir la carte</a>
   </div>
 </section>
 
@@ -548,41 +518,33 @@
     <div class="footer__grid">
       <div>
         <div class="brand">
-          <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
-            <rect width="64" height="64" rx="15" fill="#16487f"/>
-            <path d="M8 44c6-6 12-6 18 0 6 6 12 6 18 0 4-4 8-5 12-3" fill="none" stroke="#d4a24c" stroke-width="3" stroke-linecap="round"/>
-            <path d="M18 26c5-6 14-7 21-3 3 1.7 5.5 4 7 6.5-1.5 2.5-4 4.8-7 6.5-7 4-16 3-21-3l-4 .0 3-3-3-3z" fill="#eaf2fb"/>
-            <circle cx="40" cy="27.5" r="1.8" fill="#16487f"/>
-          </svg>
+          <svg class="brand__mark crest" viewBox="0 0 200 200" aria-hidden="true"><use href="#crest"/></svg>
           <span class="brand__text">
             <span class="brand__name">Les Flots des Remparts</span>
             <span class="brand__tag">Poissons &amp; Grillades</span>
           </span>
         </div>
-        <p>Poissons frais et grillades généreuses, au cœur de Carcassonne. À emporter, en livraison ou à table.</p>
+        <p>Le meilleur de la mer et la noblesse du feu, au cœur de Carcassonne. À emporter, en livraison ou à table.</p>
         <div class="footer__social" id="footer-social"></div>
       </div>
-
       <div>
-        <h4>Le restaurant</h4>
+        <h4>La Maison</h4>
         <ul>
           <li><a href="#commander">Commander</a></li>
           <li><a href="#menu">La carte</a></li>
           <li><a href="#reserver">Réserver une table</a></li>
-          <li><a href="#infos">Infos &amp; accès</a></li>
+          <li><a href="#infos">Accès &amp; horaires</a></li>
         </ul>
       </div>
-
       <div>
         <h4>Contact</h4>
         <ul>
-          <li>📞 <a data-tel href="tel:+33468000000" data-site="telephoneAffiche">04 68 00 00 00</a></li>
-          <li>✉️ <a data-mailto href="#" data-site="email">contact@lesflotsdesremparts.fr</a></li>
-          <li>📍 <span data-site="adresse">1 rue des Remparts</span>, <span data-site="codePostal">11000</span> <span data-site="adresseVille">Carcassonne</span></li>
+          <li><a data-tel href="tel:+33468000000" data-site="telephoneAffiche">04 68 00 00 00</a></li>
+          <li><a data-mailto href="#" data-site="email">contact@lesflotsdesremparts.fr</a></li>
+          <li><span style="color:var(--muted)"><span data-site="adresse">1 rue des Remparts</span>, <span data-site="codePostal">11000</span> <span data-site="adresseVille">Carcassonne</span></span></li>
         </ul>
       </div>
     </div>
-
     <div class="footer__bottom">
       <span>© <span id="year">2026</span> Les Flots des Remparts — Tous droits réservés.</span>
       <span>Poissons &amp; Grillades · Carcassonne · Prix nets en euros</span>
@@ -590,19 +552,16 @@
   </div>
 </footer>
 
-<!-- Bouton d'appel flottant (mobile) -->
 <a class="fab-call" data-tel href="tel:+33468000000" aria-label="Appeler pour commander">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
   Appeler pour commander
 </a>
 
-<!-- Lightbox carte -->
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Carte agrandie">
   <button class="lightbox__close" id="lightbox-close" aria-label="Fermer">✕</button>
   <img src="assets/carte-les-flots-des-remparts.jpg" alt="Carte complète de Les Flots des Remparts" />
 </div>
 
-<!-- Données structurées (SEO local) -->
 <script type="application/ld+json" id="ld-json">
 {
   "@context": "https://schema.org",
@@ -611,13 +570,7 @@
   "servesCuisine": ["Poissons", "Fruits de mer", "Grillades", "Française"],
   "priceRange": "€€",
   "telephone": "+33468000000",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "1 rue des Remparts",
-    "postalCode": "11000",
-    "addressLocality": "Carcassonne",
-    "addressCountry": "FR"
-  },
+  "address": { "@type": "PostalAddress", "streetAddress": "1 rue des Remparts", "postalCode": "11000", "addressLocality": "Carcassonne", "addressCountry": "FR" },
   "url": "https://www.lesflotsdesremparts.fr/",
   "acceptsReservations": "True",
   "hasMenu": "https://www.lesflotsdesremparts.fr/#menu"

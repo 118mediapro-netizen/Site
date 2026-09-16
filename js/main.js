@@ -105,8 +105,13 @@
     }
   } catch (e) { /* silencieux */ }
 
-  /* ---- 9. Menu mobile ---- */
+  /* ---- 9. Menu mobile + en-tête au défilement ---- */
   var header = $("#header"), toggle = $("#nav-toggle"), links = $("#nav-links");
+  if (header) {
+    var onScroll = function () { header.classList.toggle("scrolled", window.scrollY > 12); };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
   if (toggle && header) {
     toggle.addEventListener("click", function () {
       var open = header.classList.toggle("nav-open");
