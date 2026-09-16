@@ -1,0 +1,7 @@
+# Aperçus / captures
+preview-*.png
+
+# Dépendances / système
+node_modules/
+.DS_Store
+Thumbs.db
