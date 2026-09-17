@@ -28,7 +28,7 @@ window.SITE = {
   email: "contact@lesflotsdesremparts.fr",
 
   /* --- Adresse --- */
-  adresse: "1 rue des Remparts",       // n° et rue
+  adresse: "11 rue Jean Monnet",       // n° et rue
   codePostal: "11000",
   adresseVille: "Carcassonne",
 

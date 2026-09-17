@@ -333,9 +333,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 600; line-height: 1
 .footer__bottom { border-top: 1px solid var(--line-onblue); margin-top: 46px; padding-top: 26px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: .82rem; color: #8fabd3; letter-spacing: .03em; }
 .footer__bottom span[data-site], .footer__bottom [style] { color: inherit; }
 
-/* ---------- Bouton flottant ---------- */
-.fab-call { position: fixed; z-index: 90; left: 16px; right: 16px; bottom: 16px; display: none; align-items: center; justify-content: center; gap: 11px; background: var(--primary-grad); color: #fff; font-family: var(--font-body); font-weight: 600; text-transform: uppercase; letter-spacing: .12em; font-size: .86rem; padding: 17px; border-radius: var(--radius); box-shadow: 0 14px 34px rgba(19,63,143,.4); }
-.fab-call svg { width: 20px; height: 20px; }
+/* (Bouton d'appel flottant retiré — plus de bande fixe en bas sur mobile) */
 
 /* ---------- Lightbox ---------- */
 .lightbox { position: fixed; inset: 0; z-index: 300; background: rgba(15,40,90,.92); display: none; align-items: center; justify-content: center; padding: 26px; }
@@ -379,10 +377,8 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 600; line-height: 1
   .header.nav-open .nav__links a::after { display: none; }
   .menu-grid { grid-template-columns: 1fr; gap: 0; }
   .field-row { grid-template-columns: 1fr; }
-  .fab-call { display: flex; }
   .footer__grid { grid-template-columns: 1fr; gap: 34px; }
   .footer__bottom { flex-direction: column; }
-  .footer { padding-bottom: 100px; }
   .hero { min-height: auto; padding: 40px 0 88px; }
   .hero__inner { padding: 0 20px; }
   .hero__scroll { display: none; }
