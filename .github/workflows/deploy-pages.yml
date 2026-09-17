@@ -1,0 +1,46 @@
+name: Déploiement GitHub Pages
+
+on:
+  push:
+    branches: ["claude/restaurant-site-ordering-24qdo4"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Un seul déploiement à la fois
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupération du dépôt
+        uses: actions/checkout@v4
+
+      - name: Configuration de GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Préparation des fichiers du site
+        run: |
+          mkdir -p _site
+          cp index.html _site/
+          cp -r css js assets _site/
+
+      - name: Envoi de l'artefact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Déploiement vers GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
