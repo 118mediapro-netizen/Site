@@ -28,7 +28,7 @@ window.SITE = {
   email: "contact@lesflotsdesremparts.fr",
 
   /* --- Adresse --- */
-  adresse: "11 rue Jean Monnet",       // n° et rue
+  adresse: "6 avenue du Souvenir Français",   // n° et rue
   codePostal: "11000",
   adresseVille: "Carcassonne",
 
