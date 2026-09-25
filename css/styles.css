@@ -286,6 +286,9 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 600; line-height: 1
 .cartes__grid img:hover { transform: translateY(-4px); }
 .cartes__grid figcaption { margin-top: 12px; font-family: var(--font-head); font-style: italic; color: var(--muted); font-size: 1.05rem; }
 
+.cartes__grid--one { grid-template-columns: 1fr; max-width: 400px; }
+.hours-note { margin-top: 14px; color: var(--muted); font-size: .92rem; font-style: italic; }
+
 .js-zoom { cursor: zoom-in; }
 
 /* ---------- Réservation ---------- */
