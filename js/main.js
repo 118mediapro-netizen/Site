@@ -169,11 +169,17 @@
     });
   }
 
-  /* ---- 12. Lightbox (carte imprimée) ---- */
-  var lb = $("#lightbox"), lbClose = $("#lightbox-close"), thumb = $("#carte-thumb");
-  function openLb() { if (lb) { lb.classList.add("is-open"); document.body.style.overflow = "hidden"; } }
+  /* ---- 12. Lightbox (images agrandissables : .js-zoom) ---- */
+  var lb = $("#lightbox"), lbClose = $("#lightbox-close"), lbImg = lb ? $("img", lb) : null;
+  function openLb(src, alt) {
+    if (!lb) return;
+    if (src && lbImg) { lbImg.src = src; if (alt) lbImg.alt = alt; }
+    lb.classList.add("is-open"); document.body.style.overflow = "hidden";
+  }
   function closeLb() { if (lb) { lb.classList.remove("is-open"); document.body.style.overflow = ""; } }
-  if (thumb) thumb.addEventListener("click", openLb);
+  $$(".js-zoom").forEach(function (im) {
+    im.addEventListener("click", function () { openLb(im.currentSrc || im.src, im.alt); });
+  });
   if (lbClose) lbClose.addEventListener("click", closeLb);
   if (lb) lb.addEventListener("click", function (e) { if (e.target === lb) closeLb(); });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeLb(); });

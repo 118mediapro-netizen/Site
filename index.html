@@ -11,7 +11,7 @@
 <meta property="og:type" content="restaurant" />
 <meta property="og:title" content="Les Flots des Remparts — Poissons & Grillades à Carcassonne" />
 <meta property="og:description" content="Poissons frais & grillades. Commandez par téléphone à emporter ou en livraison, ou réservez votre table à Carcassonne." />
-<meta property="og:image" content="assets/carte-les-flots-des-remparts.jpg" />
+<meta property="og:image" content="assets/interieur-bar.jpg" />
 <meta property="og:locale" content="fr_FR" />
 <meta name="twitter:card" content="summary_large_image" />
 
@@ -67,7 +67,7 @@
 <header class="header" id="header">
   <nav class="nav" aria-label="Navigation principale">
     <a class="brand" href="#top" aria-label="Les Flots des Remparts — accueil">
-      <svg class="brand__mark crest" viewBox="0 0 200 200" aria-hidden="true"><use href="#crest"/></svg>
+      <img class="brand__mark brand__logo" src="assets/logo.jpg" alt="Blason Les Flots des Remparts" width="48" height="48" />
       <span class="brand__text">
         <span class="brand__name">Les Flots des Remparts</span>
         <span class="brand__tag">Poissons &amp; Grillades</span>
@@ -138,7 +138,7 @@
   <div class="container">
     <div class="maison__grid">
       <div class="maison__crest reveal">
-        <svg class="crest" viewBox="0 0 200 200" aria-hidden="true"><use href="#crest"/></svg>
+        <img class="maison__logo" src="assets/logo.jpg" alt="Blason Les Flots des Remparts" width="320" height="320" />
       </div>
       <div class="reveal">
         <span class="eyebrow">Notre maison</span>
@@ -165,6 +165,12 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- Galerie photos -->
+    <div class="gallery reveal">
+      <figure><img class="js-zoom" src="assets/interieur-bar.jpg" alt="La salle du restaurant Les Flots des Remparts et son grand aquarium" loading="lazy" width="1600" height="1200" /><figcaption>Notre salle &amp; son grand aquarium</figcaption></figure>
+      <figure><img class="js-zoom" src="assets/etalage.jpg" alt="L'étalage de poissons frais, arrivage du jour des criées locales" loading="lazy" width="1600" height="1200" /><figcaption>L'étalage de poissons frais — arrivage du jour</figcaption></figure>
     </div>
   </div>
 </section>
@@ -257,11 +263,39 @@
     </div>
 
     <div class="menu-tabs" role="tablist" aria-label="Catégories de la carte">
-      <a class="menu-tab is-active" href="#cat-entrees">Entrées</a>
+      <a class="menu-tab is-active" href="#cat-formules">Formules</a>
+      <a class="menu-tab" href="#cat-entrees">Entrées</a>
       <a class="menu-tab" href="#cat-poissons">Poissons</a>
       <a class="menu-tab" href="#cat-viandes">Viandes</a>
       <a class="menu-tab" href="#cat-desserts">Desserts</a>
       <a class="menu-tab" href="#cat-boissons">Boissons</a>
+    </div>
+
+    <!-- FORMULES DU MIDI -->
+    <div class="menu-cat" id="cat-formules">
+      <div class="menu-cat__head">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <h3>Formules du midi<span class="sub">Uniquement le midi</span></h3>
+      </div>
+      <div class="formules-grid">
+        <div class="formule">
+          <div class="formule__name">Formule Express</div>
+          <div class="formule__price">16,90 €</div>
+          <p class="formule__desc">Entrée + plat<br /><span class="formule__or">— ou —</span><br />Plat + dessert</p>
+        </div>
+        <div class="formule">
+          <div class="formule__name">Formule Complète</div>
+          <div class="formule__price">19,90 €</div>
+          <p class="formule__desc"><b>Entrée + plat + dessert</b><br /><span class="formule__or">le repas complet</span></p>
+        </div>
+      </div>
+      <div class="formule-details">
+        <div class="fd"><h4>Entrée</h4><p>Entrée du jour</p></div>
+        <div class="fd"><h4>Plats au choix</h4><p>Poisson du jour selon arrivage, ou viande / volaille du jour</p></div>
+        <div class="fd"><h4>Accompagnements au choix</h4><p>Frites maison, écrasé de pommes de terre ou légumes de saison</p></div>
+        <div class="fd"><h4>Dessert</h4><p>Dessert du jour</p></div>
+      </div>
+      <div class="kids"><b>Menu enfant — 5,90 €</b> · 4 nuggets + frites ou steak + frites · une boisson (Capri-Sun ou sirop) et un dessert (glace, compote ou yaourt)</div>
     </div>
 
     <!-- ENTRÉES -->
@@ -271,15 +305,12 @@
         <h3>Entrées<span class="sub">Pour bien commencer</span></h3>
       </div>
       <div class="menu-grid">
-        <div class="mitem"><span class="mitem__name">Salade chèvre chaud et ses toasts</span><span class="mitem__dots"></span><span class="mitem__price">9,00 €</span></div>
-        <div class="mitem"><span class="mitem__name">Salade César</span><span class="mitem__dots"></span><span class="mitem__price">12,90 €</span></div>
-        <div class="mitem"><span class="mitem__name">Salade verte, mangue et noix</span><span class="mitem__dots"></span><span class="mitem__price">9,90 €</span></div>
-        <div class="mitem"><span class="mitem__name">Salade boulgour</span><span class="mitem__dots"></span><span class="mitem__price">11,90 €</span></div>
-        <div class="mitem"><span class="mitem__name">Burrata, tomate &amp; mozzarella</span><span class="mitem__dots"></span><span class="mitem__price">10,90 €</span></div>
-        <div class="mitem"><span class="mitem__name">Salade piémontaise</span><span class="mitem__dots"></span><span class="mitem__price">11,90 €</span></div>
-        <div class="mitem"><span class="mitem__name">Tartare de poisson</span><span class="mitem__dots"></span><span class="mitem__price">13,90 €</span></div>
-        <div class="mitem"><span class="mitem__name">Soupe de poisson</span><span class="mitem__dots"></span><span class="mitem__price">9,90 €</span></div>
-        <div class="mitem"><span class="mitem__name">Foie gras maison</span><span class="mitem__dots"></span><span class="mitem__price">15,90 €</span></div>
+        <div class="mitem"><span class="mitem__name">Soupe de poisson</span><span class="mitem__dots"></span><span class="mitem__price">8,90 €</span></div>
+        <div class="mitem"><span class="mitem__name">César<span class="mitem__desc">Salade verte, filet de poulet pané, croûtons, tomates cerises, copeaux de parmesan, sauce César</span></span><span class="mitem__dots"></span><span class="mitem__price">12,90 €</span></div>
+        <div class="mitem"><span class="mitem__name">Chèvre chaud<span class="mitem__desc">Salade verte, tomate, toast de chèvre</span></span><span class="mitem__dots"></span><span class="mitem__price">12,90 €</span></div>
+        <div class="mitem"><span class="mitem__name">Mangue noix<span class="mitem__desc">Salade verte, crevettes, avocat, mangue, fromage, herbes fines, concassé de noix, sauce maison</span></span><span class="mitem__dots"></span><span class="mitem__price">14,90 €</span></div>
+        <div class="mitem"><span class="mitem__name">Piémontaise<span class="mitem__desc">Pommes de terre grenailles, olives noires, cornichons, œuf dur, tomate cerise</span></span><span class="mitem__dots"></span><span class="mitem__price">13,90 €</span></div>
+        <div class="mitem"><span class="mitem__name">Foie gras<span class="mitem__desc">Foie gras, confiture de figue et toast du Sud-Ouest</span></span><span class="mitem__dots"></span><span class="mitem__price">18,00 €</span></div>
       </div>
     </div>
 
@@ -290,18 +321,17 @@
         <h3>Poissons<span class="sub">Le meilleur de la mer</span></h3>
       </div>
       <div class="pricebox">
-        <p class="pricebox__title"><span class="big">Poisson selon arrivage</span> — <span class="price">35,00 € / kg</span></p>
-        <div class="pricebox__grid"><span>500 g&nbsp;: <b>17,50 €</b></span><span>300 g&nbsp;: <b>10,50 €</b></span><span>100 g&nbsp;: <b>3,50 €</b></span></div>
+        <p class="pricebox__title"><span class="big">Poissons frais à l'étalage</span> — <span class="price">33,90 € / kg</span></p>
+        <div class="pricebox__grid"><span>Sélectionnés selon l'arrivage, chacun cuisiné à la façon qui le met le mieux en valeur&nbsp;: <b>plancha, grill ou friture</b>.</span></div>
       </div>
       <div class="menu-grid">
-        <div class="mitem"><span class="mitem__name">Saint-Pierre, beurre noisette et citron</span><span class="mitem__dots"></span><span class="mitem__price small">selon arrivage</span></div>
-        <div class="mitem"><span class="mitem__name">Turbot poêlé, beurre noisette &amp; citron</span><span class="mitem__dots"></span><span class="mitem__price small">selon arrivage</span></div>
-        <div class="mitem"><span class="mitem__name">Friture de poisson <span class="mitem__desc">1 personne</span></span><span class="mitem__dots"></span><span class="mitem__price">13,90 €</span></div>
-        <div class="mitem"><span class="mitem__name">Poêlée de fruits de mer</span><span class="mitem__dots"></span><span class="mitem__price small">selon arrivage</span></div>
-        <div class="mitem"><span class="mitem__name">Crevettes piri-piri</span><span class="mitem__dots"></span><span class="mitem__price small">selon arrivage</span></div>
-        <div class="mitem"><span class="mitem__name">Brochette de gambas ou poisson</span><span class="mitem__dots"></span><span class="mitem__price small">selon arrivage</span></div>
+        <div class="mitem"><span class="mitem__name">Turbot poêlé<span class="mitem__desc">Beurre noisette, citron</span></span><span class="mitem__dots"></span><span class="mitem__price">23,90 €</span></div>
+        <div class="mitem"><span class="mitem__name">Saint-Pierre<span class="mitem__desc">Beurre noisette et citron</span></span><span class="mitem__dots"></span><span class="mitem__price">23,90 €</span></div>
+        <div class="mitem"><span class="mitem__name">Homard entier</span><span class="mitem__dots"></span><span class="mitem__price">44,90 €</span></div>
+        <div class="mitem"><span class="mitem__name">Cassolette de fruits de mer<span class="mitem__desc">Moules, crevettes, encornets, calamars, sauce tomate, citron</span></span><span class="mitem__dots"></span><span class="mitem__price">8,90 €</span></div>
+        <div class="mitem"><span class="mitem__name">Crevettes pil-pil</span><span class="mitem__dots"></span><span class="mitem__price">8,90 €</span></div>
       </div>
-      <p class="menu-note">Les poissons « selon arrivage » varient chaque jour — prix communiqué en salle ou par téléphone.</p>
+      <p class="menu-note">Accompagnements : frites maison, écrasé de pommes de terre ou légumes de saison.</p>
     </div>
 
     <!-- VIANDES -->
@@ -311,12 +341,18 @@
         <h3>Viandes<span class="sub">Grillées à la flamme</span></h3>
       </div>
       <div class="menu-grid">
-        <div class="mitem"><span class="mitem__name">Pièce de bœuf <span class="mitem__desc">300 g</span></span><span class="mitem__dots"></span><span class="mitem__price">23,90 €</span></div>
-        <div class="mitem"><span class="mitem__name">Magret de canard <span class="mitem__desc">300 g</span></span><span class="mitem__dots"></span><span class="mitem__price">26,90 €</span></div>
-        <div class="mitem"><span class="mitem__name">Côtelettes d'agneau <span class="mitem__desc">5 pièces</span></span><span class="mitem__dots"></span><span class="mitem__price">23,90 €</span></div>
-        <div class="mitem"><span class="mitem__name">Suprême de volaille</span><span class="mitem__dots"></span><span class="mitem__price">19,90 €</span></div>
+        <div class="mitem"><span class="mitem__name">Pièce de bœuf 250 g<span class="mitem__desc">Pièce selon arrivage</span></span><span class="mitem__dots"></span><span class="mitem__price">22,90 €</span></div>
+        <div class="mitem"><span class="mitem__name">Magret de canard entier</span><span class="mitem__dots"></span><span class="mitem__price">24,90 €</span></div>
+        <div class="mitem"><span class="mitem__name">Côte de bœuf 500 g</span><span class="mitem__dots"></span><span class="mitem__price">34,90 €</span></div>
+        <div class="mitem"><span class="mitem__name">Côtelettes d'agneau <span class="mitem__desc">5 pièces</span></span><span class="mitem__dots"></span><span class="mitem__price">24,90 €</span></div>
+        <div class="mitem"><span class="mitem__name">Suprême de poulet</span><span class="mitem__dots"></span><span class="mitem__price">16,90 €</span></div>
       </div>
-      <p class="menu-note">Accompagnements au choix : frites maison, écrasé de pommes de terre ou légumes de saison.</p>
+      <p class="menu-note">Nos viandes sont accompagnées de 2 garnitures au choix et de sauces.</p>
+
+      <div class="pricebox">
+        <p class="pricebox__title"><span class="big">Suppléments &amp; garnitures</span></p>
+        <div class="pricebox__grid"><span>Lentilles en sauce — <b>5,90 €</b></span><span>Purée de pois cassés &amp; fèves — <b>5,90 €</b></span><span>Feije en sauce — <b>5,90 €</b></span><span>Poêlée de légumes de saison — <b>5,90 €</b></span><span>Portion de piment — <b>1,00 €</b></span></div>
+      </div>
     </div>
 
     <!-- DESSERTS -->
@@ -326,11 +362,12 @@
         <h3>Desserts<span class="sub">La touche sucrée</span></h3>
       </div>
       <div class="menu-grid">
-        <div class="mitem"><span class="mitem__name">Fondant au chocolat</span><span class="mitem__dots"></span><span class="mitem__price">8,30 €</span></div>
-        <div class="mitem"><span class="mitem__name">Tarte</span><span class="mitem__dots"></span><span class="mitem__price">8,90 €</span></div>
-        <div class="mitem"><span class="mitem__name">Panna cotta</span><span class="mitem__dots"></span><span class="mitem__price">7,20 €</span></div>
-        <div class="mitem"><span class="mitem__name">Tiramisu</span><span class="mitem__dots"></span><span class="mitem__price">7,90 €</span></div>
-        <div class="mitem"><span class="mitem__name">Café ou thé gourmand</span><span class="mitem__dots"></span><span class="mitem__price">8,20 €</span></div>
+        <div class="mitem"><span class="mitem__name">Fondant au chocolat</span><span class="mitem__dots"></span><span class="mitem__price">7,90 €</span></div>
+        <div class="mitem"><span class="mitem__name">Panna cotta aux fruits rouges</span><span class="mitem__dots"></span><span class="mitem__price">6,90 €</span></div>
+        <div class="mitem"><span class="mitem__name">Tiramisu</span><span class="mitem__dots"></span><span class="mitem__price">6,90 €</span></div>
+        <div class="mitem"><span class="mitem__name">Tarte du jour<span class="mitem__desc">Crème anglaise + glace</span></span><span class="mitem__dots"></span><span class="mitem__price">7,90 €</span></div>
+        <div class="mitem"><span class="mitem__name">Café gourmand</span><span class="mitem__dots"></span><span class="mitem__price">7,90 €</span></div>
+        <div class="mitem"><span class="mitem__name">Thé à la menthe gourmand</span><span class="mitem__dots"></span><span class="mitem__price">7,90 €</span></div>
       </div>
     </div>
 
@@ -342,61 +379,60 @@
       </div>
       <div class="menu-grid">
         <div>
-          <div class="mitem"><span class="mitem__name">Thé à la menthe</span><span class="mitem__dots"></span><span class="mitem__price">3,50 €</span></div>
-          <div class="mitem"><span class="mitem__name">Cocktail maison</span><span class="mitem__dots"></span><span class="mitem__price">7,50 €</span></div>
-          <div class="mitem"><span class="mitem__name">Boisson gazeuse</span><span class="mitem__dots"></span><span class="mitem__price">3,50 €</span></div>
-          <div class="mitem"><span class="mitem__name">Vin désalcoolisé <span class="mitem__desc">le verre</span></span><span class="mitem__dots"></span><span class="mitem__price">3,50 €</span></div>
-          <div class="mitem"><span class="mitem__name">Bière désalcoolisée</span><span class="mitem__dots"></span><span class="mitem__price">3,50 €</span></div>
+          <p class="drink-sub">Boissons chaudes</p>
+          <div class="mitem"><span class="mitem__name">Thé à la menthe</span><span class="mitem__dots"></span><span class="mitem__price">3,00 €</span></div>
+          <div class="mitem"><span class="mitem__name">Café espresso</span><span class="mitem__dots"></span><span class="mitem__price">2,50 €</span></div>
+          <div class="mitem"><span class="mitem__name">Café allongé</span><span class="mitem__dots"></span><span class="mitem__price">2,50 €</span></div>
         </div>
         <div>
+          <p class="drink-sub">Sodas &amp; eaux</p>
           <div class="mitem"><span class="mitem__name">Coca-Cola / Zéro</span><span class="mitem__dots"></span><span class="mitem__price">3,50 €</span></div>
-          <div class="mitem"><span class="mitem__name">Ice Tea</span><span class="mitem__dots"></span><span class="mitem__price">3,50 €</span></div>
-          <div class="mitem"><span class="mitem__name">Orangina / Oasis Tropical</span><span class="mitem__dots"></span><span class="mitem__price">3,50 €</span></div>
+          <div class="mitem"><span class="mitem__name">Ice Tea / Orangina / Oasis</span><span class="mitem__dots"></span><span class="mitem__price">3,50 €</span></div>
           <div class="mitem"><span class="mitem__name">Schweppes / Agrumes</span><span class="mitem__dots"></span><span class="mitem__price">3,50 €</span></div>
-          <div class="mitem"><span class="mitem__name">Perrier / Limonade / Capri-Sun</span><span class="mitem__dots"></span><span class="mitem__price">3,50 €</span></div>
-          <div class="mitem"><span class="mitem__name">Red Bull</span><span class="mitem__dots"></span><span class="mitem__price">4,50 €</span></div>
+          <div class="mitem"><span class="mitem__name">Red Bull</span><span class="mitem__dots"></span><span class="mitem__price">4,00 €</span></div>
+          <div class="mitem"><span class="mitem__name">Eau Sémillante 75 cl <span class="mitem__desc">plate ou pétillante</span></span><span class="mitem__dots"></span><span class="mitem__price">3,00 €</span></div>
         </div>
       </div>
 
       <div class="pricebox">
-        <p class="pricebox__title"><span class="big">Cocktails &amp; apéritifs sans alcool</span> — <span class="price">7,50 €</span></p>
+        <p class="pricebox__title"><span class="big">Cocktails &amp; apéritifs sans alcool</span> — <span class="price">6,90 €</span></p>
         <div class="pricebox__grid"><span>Mojito Granini</span><span>Piña Colada Granini</span><span>Planteur Granini</span><span>Spritz Venezio</span><span>Spritz Limoncello</span><span>Hugo Venezio</span><span>Tanqueray 0.0</span><span>Anis Cristal sans alcool</span><span>Palermo blanc</span></div>
       </div>
 
       <div class="menu-grid">
         <div class="pricebox" style="margin:8px 0">
-          <p class="pricebox__title"><span class="big">Jus de fruits</span> — <span class="price">3,50 €</span></p>
+          <p class="pricebox__title"><span class="big">Jus de fruits</span> — <span class="price">3,80 €</span></p>
           <div class="pricebox__grid"><span>Orange</span><span>Pomme</span><span>Ananas</span><span>Multifruits</span><span>Tomate</span></div>
         </div>
         <div class="pricebox" style="margin:8px 0">
-          <p class="pricebox__title"><span class="big">Sirops</span> — <span class="price">2,50 €</span></p>
-          <div class="pricebox__grid"><span>Menthe</span><span>Grenadine</span><span>Cassis</span><span>Citron</span><span>Fraise</span><span>Pêche</span><span>Violette</span><span>Orgeat</span></div>
+          <p class="pricebox__title"><span class="big">Sirops</span> — <span class="price">2,80 €</span></p>
+          <div class="pricebox__grid"><span>Menthe verte</span><span>Grenadine</span><span>Cassis</span><span>Citron</span><span>Fraise</span><span>Pêche</span><span>Violette</span></div>
         </div>
       </div>
 
       <div class="pricebox">
-        <p class="pricebox__title"><span class="big">Vins désalcoolisés — Le Petit Béret</span> — <span class="price">4,50 € le verre</span></p>
+        <p class="pricebox__title"><span class="big">Vins désalcoolisés — Le Petit Béret</span></p>
         <div class="pricebox__grid"><span>Rouge</span><span>Blanc</span><span>Rosé</span><span>Blanc calme</span><span>Blanc effervescent</span></div>
       </div>
     </div>
 
     <p class="menu-foot">— Prix nets en euros —</p>
 
-    <div class="carte-real reveal">
-      <div class="carte-real__img">
-        <img src="assets/carte-les-flots-des-remparts.jpg" alt="La carte imprimée de Les Flots des Remparts — poissons et grillades" id="carte-thumb" loading="lazy" width="1055" height="1491" />
-      </div>
-      <div>
+    <div class="cartes reveal">
+      <div class="cartes__intro center">
         <span class="eyebrow">Le document original</span>
-        <h3>La carte complète</h3>
-        <p>Retrouvez l'intégralité de notre carte imprimée. Cliquez pour l'agrandir, ou appelez-nous pour connaître les arrivages et suggestions du jour.</p>
-        <div class="row">
-          <a class="btn btn--ghost" href="assets/carte-les-flots-des-remparts.jpg" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg>
-            Agrandir la carte
-          </a>
-          <a class="btn btn--primary" data-tel href="tel:+33468000000">Commander</a>
-        </div>
+        <h3>Nos cartes en image</h3>
+        <p class="section-lead">Cliquez pour agrandir. Pour les arrivages et suggestions du jour, un simple appel suffit.</p>
+      </div>
+      <div class="cartes__grid">
+        <figure><img class="js-zoom" src="assets/carte-menu.jpg" alt="La carte de Les Flots des Remparts" loading="lazy" width="1055" height="1491" /><figcaption>La carte</figcaption></figure>
+        <figure><img class="js-zoom" src="assets/carte-formules.jpg" alt="Les formules du midi de Les Flots des Remparts" loading="lazy" width="1055" height="1491" /><figcaption>Formules du midi</figcaption></figure>
+      </div>
+      <div class="center" style="margin-top:28px">
+        <a class="btn btn--primary btn--lg" data-tel href="tel:+33468000000">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Commander par téléphone
+        </a>
       </div>
     </div>
   </div>
@@ -519,7 +555,7 @@
     <div class="footer__grid">
       <div>
         <div class="brand">
-          <svg class="brand__mark crest" viewBox="0 0 200 200" aria-hidden="true"><use href="#crest"/></svg>
+          <img class="brand__mark brand__logo" src="assets/logo.jpg" alt="Blason Les Flots des Remparts" width="48" height="48" />
           <span class="brand__text">
             <span class="brand__name">Les Flots des Remparts</span>
             <span class="brand__tag">Poissons &amp; Grillades</span>
@@ -555,7 +591,7 @@
 
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Carte agrandie">
   <button class="lightbox__close" id="lightbox-close" aria-label="Fermer">✕</button>
-  <img src="assets/carte-les-flots-des-remparts.jpg" alt="Carte complète de Les Flots des Remparts" />
+  <img src="assets/carte-menu.jpg" alt="Carte de Les Flots des Remparts" />
 </div>
 
 <script type="application/ld+json" id="ld-json">
